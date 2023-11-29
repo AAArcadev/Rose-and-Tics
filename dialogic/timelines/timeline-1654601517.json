@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Would you look at that! \nThe second [color=#b58353]GREAT SEED[/color] was at the top of the 'evalitator'. \nWhat luck! Only one remains!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654601517.json",
+		"name": "RuinSurviveEnd"
+	}
+}

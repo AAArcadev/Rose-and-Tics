@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It looks like the garden I was in isn’t the only one wilting away. It saddens me to see this."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654537508.json",
+		"name": "FrontGarden"
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654548317.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The engravement reads...\nIn order to enter the holy building.\nFace the wrath of the 'Great Sword', then move-\nTwice to the South.\nOnce to the West.\nOnce to the North\nAnd finally once in the same way of the second direction."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I got a headache just from reading that. Haha!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654957755.json",
+		"name": "RuinGraveyard"
+	}
+}

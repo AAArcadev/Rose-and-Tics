@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh? You’re ready to tell me how you ended up falling down. \nOh. But that doesn’t make sense. Being an orphan doesn’t give them the right to bully you. And it definitely doesn’t mean they should throw you down a hole. \nThen why do you even want to go back up? If only mean people wait for you up there. \nYou’re used to it? Well you shouldn’t be! I'm certainly not.\nBeing on my own all this time with only that book to teach me about the outside world. \nI always thought everyone was nice and caring, expect GERALD of course, haha! \nBut now…[pause=0.3] now I’m finding out that even my mom wasn’t the great person I thought her to be. \nIt definitely hurts... \nCmon, let’s just go. We can get the last seed and be done with this."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654601637.json",
+		"name": "CastleEnemy1"
+	}
+}

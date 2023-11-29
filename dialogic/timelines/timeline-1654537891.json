@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That’s the first [color=#b58353]GREAT SEED[/color].\nBut it seems like it’s stuck in that blob of honeycomb. I think I should be able to get it by elongating my roots and grabbing it from underneath. \nPlant me into the ground and I’ll do the rest. \nHowever, the bees won't be so happy with me messing with their home. So PROTECT ME while I get this seed out."
+		},
+		{
+			"emit_signal": "MineSurvive",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654537891.json",
+		"name": "MineSurvive"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=5 level=10]EEEK! [/shake]Are those skeletons alive?! [shake rate=5 level=10]That’s creeepy![/shake] \nBut then again I AM a talking flower so I shouldn’t be the one condemning. \nThis town though.. It looks familiar but something is off… very off."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654600459.json",
+		"name": "RuinEnemy1"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That big sign on the wall says Riley’s Laboratory. \nRiley... Thats the scientist my da-[pause=0.3] Gerald mentioned.\nLooks important, let's go inside. But first of course we need to solve this puzzle to get inside."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654601955.json",
+		"name": "CastlePuzzle"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look those are elevator doors up ahead this puzzle must be able to activate it.\nHow do I know what elevators are? \nWell-[pause=0.3] I-[pause=0.3] wait what ARE elevators. I just said that word without thinking.\nI SHOULD know that word but just don't. That's weird...\nWhat?\nThey are small rooms that move up and down. That doesn’t make sense, won’t they just crash with the room above them? \nThey’re separate rooms? Then how do they help you-[pause=0.3] You know never mind let’s just solve this puzzle and I’ll see for myself. "
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654601081.json",
+		"name": "RuinPuzzle"
+	}
+}

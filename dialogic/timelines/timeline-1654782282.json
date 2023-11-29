@@ -1,0 +1,147 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "WOAH! HA HA HA! WHAT A PLEASANT SURPISE! Do my eye sockets decieve me or is that Lilian, or Rose? I forget which one you go by."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Are- Are you Riley?"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Am- AM I RILEY! HA HA HA! no deary no Riley is long gone! I go by [color=#fafbce]RIALETY[/color] now!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...\nThat is a terrible name."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As if I would listen to the rambling of a crazy woman. "
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You took advantage of that crazy woman!\nUsed her- me as a lab rat!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I did. And I plan to it again.\nYou see I planned this all. Of course I expected you to come a bit later. \nMaybe when your legs had developed. \nBut you came early and- oh- you brought a friend!\nYou see, you were the closest thing to a success for the immortality. \nSecond to me of course.\nAnd I wanted to see why that was. So I told you about the [color=#b58353]GREAT SEEDS[/color]. Baited you to come here on your own accord."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you wanted to use me why didn't you just take me when you went to visit before?"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh! Because, at the time you were still a budding flower. I wasn't sure if you would be of any use.\nBut now... Now you've fully grown into what I desire. What I crave!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're not going to use me like you did before!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh but I already have, have I not?\nYou did clear out the castle and my lab of any dangers.\nAnd you did unlock that door keeping me inside here.\nThat means I am free of this hell I've been stuck in for months!\nNow come, let me use you to create the greatest thing man has ever seen."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "NEVER!"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1655078529.cfg"
+		},
+		{
+			"character": "character-1654782300.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh! But I don't remember asking if you wanted to."
+		},
+		{
+			"emit_signal": "rileyLaugh",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654782282.json",
+		"name": "RileyFight"
+	}
+}

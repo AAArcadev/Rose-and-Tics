@@ -1,0 +1,110 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That was the last [color=#b58353]GREAT SEED[/color].\nGuess that means this is it.\nWhile it wasn't too long, I had a fun time hanging out with you.\nScary... [pause=0.3] but still fun.\nI'm happy I met you. "
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Guess this is bye then."
+		},
+		{
+			"choice": "You should come with me.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ha ha!\nI have to admit I hoped you would say that!\nOf course I'll go with you!"
+		},
+		{
+			"change_scene": "res://Scene/EndingScreen.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		},
+		{
+			"choice": "Guess so...",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah...\nWell lets head back to my garden and I can send you off."
+		},
+		{
+			"change_scene": "res://Scene/EndingScreen.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		},
+		{
+			"choice": "Actually I was thinking of staying here.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You sure?\nThis is quite a boring place.\nBut I guess having you around wouldn't be too boring.\nYeah!\nI guess you won't be comfortable living in the garden so we might have to move into the house infront of it!"
+		},
+		{
+			"change_scene": "res://Scene/EndingScreen.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1655073360.json",
+		"name": "RoseBye"
+	}
+}

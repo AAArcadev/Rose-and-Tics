@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This place is creepy.\nThat big sign on the wall says Riley’s Laboratory. \nRiley... That's the scientist my da-[pause=0.3] Gerald mentioned.\nWho has a massive sign showing it's their lab, IN THEIR LAB?\nClearly someone with a massive ego. Haha!\nWhat? I'm not jealous. \nThough it WOULD be nice to have your own lab.\nAnyways, Let's look around."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654602251.json",
+		"name": "CastleLore"
+	}
+}

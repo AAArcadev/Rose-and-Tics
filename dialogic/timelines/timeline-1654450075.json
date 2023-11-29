@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello?\nOh ok, phew! This is a relief! I thought you were …, [pause=0.3]you know …, [pause=0.3]dead.\nBecause my mom’s garden is already dying. If there was a body too then-[pause=0.3]then I don’t whether I can-\nOh sorry sorry I got a bit sidetracked. I haven’t even introduced myself!\nHowdy! My name is Rose! My mom, Lilian, is the owner of this garden. \nI don’t know exactly where she is right now. In fact I’ve never actually seen her. But that’s no reason to allow her garden to wither away right?\nWhat’s that? You wanna go back to the surface.\nWell, unfortunately I have no way to help you right now. Unless of course, I become fully grown then I could create a vine for you to climb up. \nBut for that you’ll probably have to wait for like a month haha.\nI know, I know, you don't have the time for that but I can’t think of anything els- \nUnless, and this is risky, we get the legendary [color=#b58353]GREAT SEED[/color]. Yeah, a stranger once came to visit me and she told me all about them.\nThey supposedly could bring extreme and instant growth to plants as well as getting rid of any wilting they might be undergoing. \nWe could use it to grow me as well as return this garden back to good health.\nThe woman was quite nice, even brought me this book.\nShe said it was from my mother. My mom wrote all about how we did when I was a baby.\nOf course I don't remember any of that.\nBut then again who remembers when they were a baby.\nAnyways. If you're ready to start just get that [color=#b56553]FLOWER POT[/color]."
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654548317.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You can [color=#5369b5]INTERACT WITH THINGS[/color] by [color=#5369b5]PRESSING 'Q' or 'THE SPACEBAR[/color]' when the [color=#5369b5]EXCLAMATION MARK APPEARS[/color]."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654450075.json",
+		"name": "RoseIntroduction"
+	}
+}

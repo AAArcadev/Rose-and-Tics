@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654649013.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What’s that? This town is much like yours? Well maybe it’s the houses, it's a very common building style. \nSpeaking of home wouldn’t your parents be very worried about you? \nOh, You’re an orphan? I’m terrible sorry. \nEven though I’ve never met my parents I couldn’t imagine what you’ve been through. \nBut now with that last diary. About how I was just a figment of imagination for Lilian. I-[pause=0.3] I don’t know what to think. \n[shake rate=5 level=10]I’m real right?[/shake] \n[shake rate=5 level=10]Like you can see and hear me?[/shake] \nBut you DID fall all the way down and might have hit your head.\n[shake rate=5 level=10]Oh my gosh. I actually might not be real![/shake] \n[shake rate=5 level=10]But that-[pause=0.3] you- [pause=0.3]Lilian-[pause=0.3] I-[/shake]  \nOk, ok you're right. I should just calm down and focus on getting the remaining GREAT SEEDS. \nLet’s go."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654600704.json",
+		"name": "RuinEnemy2"
+	}
+}

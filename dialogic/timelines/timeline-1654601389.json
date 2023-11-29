@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1654538440.cfg"
+		},
+		{
+			"character": "character-1654446520.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh! I see what you mean now! But don’t stairs do the same thing? This just seems lazy to me. \nHow do I know what stairs are? \nDon’t be silly! Everyone knows what stairs are!\nLet’s get on this levitator-[pause=0.3] Oh?[pause=0.3] El-[pause=0.3] elevator and get to the castle."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1654601389.json",
+		"name": "RuinSurvive"
+	}
+}
