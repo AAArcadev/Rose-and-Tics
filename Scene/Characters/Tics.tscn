@@ -1,0 +1,1102 @@
+[gd_scene load_steps=83 format=2]
+
+[ext_resource path="res://Images/Characters/Tics.png" type="Texture" id=1]
+[ext_resource path="res://Script/CharacterScript/TicsScript.gd" type="Script" id=2]
+[ext_resource path="res://Images/Environmental Objects/Weapons/Sword.png" type="Texture" id=3]
+[ext_resource path="res://Images/UI/HealthGUI.png" type="Texture" id=4]
+[ext_resource path="res://Script/EnvironmentalObjectScript/WeaponOriginScript.gd" type="Script" id=5]
+[ext_resource path="res://Script/GuiScript/GUIBackHolderScript.gd" type="Script" id=6]
+[ext_resource path="res://Images/Environmental Objects/Key.png" type="Texture" id=7]
+[ext_resource path="res://Font/alagard.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Script/GuiScript/DialogueHolderScript.gd" type="Script" id=9]
+[ext_resource path="res://Scene/GUI/BookText.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Images/UI/TicsDeathImage.png" type="Texture" id=11]
+[ext_resource path="res://Scene/GUI/MainAnimationPlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Images/Characters/TicsAndRose.png" type="Texture" id=13]
+[ext_resource path="res://Script/GuiScript/PauseScreenScript.gd" type="Script" id=14]
+[ext_resource path="res://Script/GuiScript/EndScreenHolderScript.gd" type="Script" id=15]
+[ext_resource path="res://Images/UI/Indicator.png" type="Texture" id=16]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 8, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 13 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 13 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "Move",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "IdleRose",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 49 ), SubResource( 50 ) ],
+"loop": true,
+"name": "MoveRose",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 4 )
+region = Rect2( 31, 10, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 4 )
+region = Rect2( 93, 20, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 4 )
+region = Rect2( 62, 20, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 4 )
+region = Rect2( 62, 10, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 20, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 4 )
+region = Rect2( 31, 0, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 10, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 4 )
+region = Rect2( 93, 0, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 30, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 4 )
+region = Rect2( 31, 20, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 4 )
+region = Rect2( 62, 0, 31, 10 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 4 )
+region = Rect2( 93, 10, 31, 10 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 51 ) ],
+"loop": true,
+"name": "7",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 62 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 59 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 57 ) ],
+"loop": true,
+"name": "12",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 52 ) ],
+"loop": true,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 63 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ) ],
+"loop": true,
+"name": "11",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 58 ) ],
+"loop": true,
+"name": "8",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 56 ) ],
+"loop": true,
+"name": "9",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 60 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 61 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 53 ) ],
+"loop": true,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 54 ) ],
+"loop": true,
+"name": "5",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=32]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=33]
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=35]
+
+[sub_resource type="StyleBoxEmpty" id=36]
+
+[sub_resource type="StyleBoxEmpty" id=37]
+
+[sub_resource type="StyleBoxEmpty" id=38]
+
+[sub_resource type="DynamicFont" id=39]
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
+[sub_resource type="StyleBoxEmpty" id=41]
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="StyleBoxEmpty" id=43]
+
+[sub_resource type="StyleBoxEmpty" id=44]
+
+[sub_resource type="DynamicFont" id=45]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=66]
+outline_size = 1
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=67]
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[sub_resource type="StyleBoxEmpty" id=70]
+
+[sub_resource type="StyleBoxEmpty" id=71]
+
+[sub_resource type="StyleBoxEmpty" id=72]
+
+[sub_resource type="StyleBoxEmpty" id=73]
+
+[sub_resource type="DynamicFont" id=68]
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=74]
+
+[sub_resource type="StyleBoxEmpty" id=75]
+
+[sub_resource type="StyleBoxEmpty" id=76]
+
+[sub_resource type="StyleBoxEmpty" id=77]
+
+[sub_resource type="StyleBoxEmpty" id=78]
+
+[sub_resource type="Shader" id=23]
+code = "/*
+Shader from Godot Shaders - the free shader library.
+godotshaders.com/shader/VHS-and-CRT-monitor-effect
+
+This shader is under CC0 license. Feel free to use, improve and 
+change this shader according to your needs and consider sharing 
+the modified result to godotshaders.com.
+*/
+
+shader_type canvas_item;
+
+//*** IMPORTANT! ***/ 
+// - If you are using this shader to affect the node it is applied to set 'overlay' to false (unchecked in the instepctor).
+// - If you are using this shader as an overlay, and want the shader to affect the nodes below in the Scene hierarchy,
+//   set 'overlay' to true (checked in the inspector).
+// On Mac there is potentially a bug causing this to not work properly. If that is the case and you want to use the shader as an overlay
+// change all \"overlay ? SCREEN_TEXTURE : TEXTURE\" to only \"SCREEN_TEXTURE\" on lines 129-140, and \"vec2 uv = overlay ? warp(SCREEN_UV) : warp(UV);\"
+// to \"vec2 uv = warp(SCREEN_UV);\" on line 98.
+uniform bool overlay = false;
+
+uniform float scanlines_opacity : hint_range(0.0, 1.0) = 0.4;
+uniform float scanlines_width : hint_range(0.0, 0.5) = 0.25;
+uniform float grille_opacity : hint_range(0.0, 1.0) = 0.3;
+uniform vec2 resolution = vec2(640.0, 480.0); // Set the number of rows and columns the texture will be divided in. Scanlines and grille will make a square based on these values
+
+uniform bool pixelate = true; // Fill each square (\"pixel\") with a sampled color, creating a pixel look and a more accurate representation of how a CRT monitor would work.
+
+uniform bool roll = true;
+uniform float roll_speed = 8.0; // Positive values are down, negative are up
+uniform float roll_size : hint_range(0.0, 100.0) = 15.0;
+uniform float roll_variation : hint_range(0.1, 5.0) = 1.8; // This valie is not an exact science. You have to play around with the value to find a look you like. How this works is explained in the code below.
+uniform float distort_intensity : hint_range(0.0, 0.2) = 0.05; // The distortion created by the rolling effect.
+
+uniform float noise_opacity : hint_range(0.0, 1.0) = 0.4;
+uniform float noise_speed = 5.0; // There is a movement in the noise pattern that can be hard to see first. This sets the speed of that movement.
+
+uniform float static_noise_intensity : hint_range(0.0, 1.0) = 0.06;
+
+uniform float aberration : hint_range(-1.0, 1.0) = 0.03; // Chromatic aberration, a distortion on each color channel.
+uniform float brightness = 1.4; // When adding scanline gaps and grille the image can get very dark. Brightness tries to compensate for that.
+uniform bool discolor = true; // Add a discolor effect simulating a VHS
+
+uniform float warp_amount :hint_range(0.0, 5.0) = 1.0; // Warp the texture edges simulating the curved glass of a CRT monitor or old TV.
+uniform bool clip_warp = false;
+
+uniform float vignette_intensity = 0.4; // Size of the vignette, how far towards the middle it should go.
+uniform float vignette_opacity : hint_range(0.0, 1.0) = 0.5;
+
+// Used by the noise functin to generate a pseudo random value between 0.0 and 1.0
+vec2 random(vec2 uv){
+    uv = vec2( dot(uv, vec2(127.1,311.7) ),
+               dot(uv, vec2(269.5,183.3) ) );
+    return -1.0 + 2.0 * fract(sin(uv) * 43758.5453123);
+}
+
+// Generate a Perlin noise used by the distortion effects
+float noise(vec2 uv) {
+    vec2 uv_index = floor(uv);
+    vec2 uv_fract = fract(uv);
+
+    vec2 blur = smoothstep(0.0, 1.0, uv_fract);
+
+    return mix( mix( dot( random(uv_index + vec2(0.0,0.0) ), uv_fract - vec2(0.0,0.0) ),
+                     dot( random(uv_index + vec2(1.0,0.0) ), uv_fract - vec2(1.0,0.0) ), blur.x),
+                mix( dot( random(uv_index + vec2(0.0,1.0) ), uv_fract - vec2(0.0,1.0) ),
+                     dot( random(uv_index + vec2(1.0,1.0) ), uv_fract - vec2(1.0,1.0) ), blur.x), blur.y) * 0.5 + 0.5;
+}
+
+// Takes in the UV and warps the edges, creating the spherized effect
+vec2 warp(vec2 uv){
+	vec2 delta = uv - 0.5;
+	float delta2 = dot(delta.xy, delta.xy);
+	float delta4 = delta2 * delta2;
+	float delta_offset = delta4 * warp_amount;
+	
+	return uv + delta * delta_offset;
+}
+
+// Adds a black border to hide stretched pixel created by the warp effect
+float border (vec2 uv){
+	float radius = min(warp_amount, 0.08);
+	radius = max(min(min(abs(radius * 2.0), abs(1.0)), abs(1.0)), 1e-5);
+	vec2 abs_uv = abs(uv * 2.0 - 1.0) - vec2(1.0, 1.0) + radius;
+	float dist = length(max(vec2(0.0), abs_uv)) / radius;
+	float square = smoothstep(0.96, 1.0, dist);
+	return clamp(1.0 - square, 0.0, 1.0);
+}
+
+// Adds a vignette shadow to the edges of the image
+float vignette(vec2 uv){
+	uv *= 1.0 - uv.xy;
+	float vignette = uv.x * uv.y * 15.0;
+	return pow(vignette, vignette_intensity * vignette_opacity);
+}
+
+void fragment()
+{
+	vec2 uv = overlay ? warp(SCREEN_UV) : warp(UV); // Warp the uv. uv will be used in most cases instead of UV to keep the warping
+	vec2 text_uv = uv;
+	vec2 roll_uv = vec2(0.0);
+	float time = roll ? TIME : 0.0;
+	
+
+	// Pixelate the texture based on the given resolution.
+	if (pixelate)
+	{
+		text_uv = ceil(uv * resolution) / resolution;
+	}
+	
+	// Create the rolling effect. We need roll_line a bit later to make the noise effect.
+	// That is why this runs if roll is true OR noise_opacity is over 0.
+	float roll_line = 0.0;
+	if (roll || noise_opacity > 0.0)
+	{
+		// Create the areas/lines where the texture will be distorted.
+		roll_line = smoothstep(0.3, 0.9, sin(uv.y * roll_size - (time * roll_speed) ) );
+		// Create more lines of a different size and apply to the first set of lines. This creates a bit of variation.
+		roll_line *= roll_line * smoothstep(0.3, 0.9, sin(uv.y * roll_size * roll_variation - (time * roll_speed * roll_variation) ) );
+		// Distort the UV where where the lines are
+		roll_uv = vec2(( roll_line * distort_intensity * (1.-UV.x)), 0.0);
+	}
+	
+	vec4 text;
+	if (roll)
+	{
+		// If roll is true distort the texture with roll_uv. The texture is split up into RGB to 
+		// make some chromatic aberration. We apply the aberration to the red and green channels accorging to the aberration parameter
+		// and intensify it a bit in the roll distortion.
+		text.r = texture(SCREEN_TEXTURE, text_uv + roll_uv * 0.8 + vec2(aberration, 0.0) * .1).r;
+		text.g = texture(SCREEN_TEXTURE, text_uv + roll_uv * 1.2 - vec2(aberration, 0.0) * .1 ).g;
+		text.b = texture(SCREEN_TEXTURE, text_uv + roll_uv).b;
+		text.a = 1.0;
+	}
+	else
+	{
+		// If roll is false only apply the aberration without any distorion. The aberration values are very small so the .1 is only 
+		// to make the slider in the Inspector less sensitive.
+		text.r = texture(SCREEN_TEXTURE, text_uv + vec2(aberration, 0.0) * .1).r;
+		text.g = texture(SCREEN_TEXTURE, text_uv - vec2(aberration, 0.0) * .1).g;
+		text.b = texture(SCREEN_TEXTURE, text_uv).b;
+		text.a = 1.0;
+	}
+	
+	float r = text.r;
+	float g = text.g;
+	float b = text.b;
+	
+	uv = warp(UV);
+	
+	// CRT monitors don't have pixels but groups of red, green and blue dots or lines, called grille. We isolate the texture's color channels 
+	// and divide it up in 3 offsetted lines to show the red, green and blue colors next to each other, with a small black gap between.
+	if (grille_opacity > 0.0){
+		
+		float g_r = smoothstep(0.85, 0.95, abs(sin(uv.x * (resolution.x * 3.14159265))));
+		r = mix(r, r * g_r, grille_opacity);
+		
+		float g_g = smoothstep(0.85, 0.95, abs(sin(1.05 + uv.x * (resolution.x * 3.14159265))));
+		g = mix(g, g * g_g, grille_opacity);
+		
+		float b_b = smoothstep(0.85, 0.95, abs(sin(2.1 + uv.x * (resolution.x * 3.14159265))));
+		b = mix(b, b * b_b, grille_opacity);
+		
+	}
+	
+	// Apply the grille to the texture's color channels and apply Brightness. Since the grille and the scanlines (below) make the image very dark you
+	// can compensate by increasing the brightness.
+	text.r = clamp(r * brightness, 0.0, 1.0);
+	text.g = clamp(g * brightness, 0.0, 1.0);
+	text.b = clamp(b * brightness, 0.0, 1.0);
+	
+	// Scanlines are the horizontal lines that make up the image on a CRT monitor. 
+	// Here we are actual setting the black gap between each line, which I guess is not the right definition of the word, but you get the idea  
+	float scanlines = 0.5;
+	if (scanlines_opacity > 0.0)
+	{
+		// Same technique as above, create lines with sine and applying it to the texture. Smoothstep to allow setting the line size.
+		scanlines = smoothstep(scanlines_width, scanlines_width + 0.5, abs(sin(uv.y * (resolution.y * 3.14159265))));
+		text.rgb = mix(text.rgb, text.rgb * vec3(scanlines), scanlines_opacity);
+	}
+	
+	// Apply the banded noise.
+	if (noise_opacity > 0.0)
+	{
+		// Generate a noise pattern that is very stretched horizontally, and animate it with noise_speed
+		float noise = smoothstep(0.4, 0.5, noise(uv * vec2(2.0, 200.0) + vec2(10.0, (TIME * (noise_speed))) ) );
+		
+		// We use roll_line (set above) to define how big the noise should be vertically (multiplying cuts off all black parts).
+		// We also add in some basic noise with random() to break up the noise pattern above. The noise is sized according to 
+		// the resolution value set in the inspector. If you don't like this look you can 
+		// change \"ceil(uv * resolution) / resolution\" to only \"uv\" to make it less pixelated. Or multiply resolution with som value
+		// greater than 1.0 to make them smaller.
+		roll_line *= noise * scanlines * clamp(random((ceil(uv * resolution) / resolution) + vec2(TIME * 0.8, 0.0)).x + 0.8, 0.0, 1.0);
+		// Add it to the texture based on noise_opacity
+		text.rgb = clamp(mix(text.rgb, text.rgb + roll_line, noise_opacity), vec3(0.0), vec3(1.0));
+	}
+	
+	// Apply static noise by generating it over the whole screen in the same way as above
+	if (static_noise_intensity > 0.0)
+	{
+		text.rgb += clamp(random((ceil(uv * resolution) / resolution) + fract(TIME)).x, 0.0, 1.0) * static_noise_intensity;
+	}
+	
+	// Apply a black border to hide imperfections caused by the warping.
+	// Also apply the vignette
+	text.rgb *= border(uv);
+	text.rgb *= vignette(uv);
+	// Hides the black border and make that area transparent. Good if you want to add the the texture on top an image of a TV or monitor.
+	if (clip_warp)
+	{
+		text.a = border(uv);
+	}
+	
+	// Apply discoloration to get a VHS look (lower saturation and higher contrast)
+	// You can play with the values below or expose them in the Inspector.
+	float saturation = 0.5;
+	float contrast = 1.2;
+	if (discolor)
+	{
+		// Saturation
+		vec3 greyscale = vec3(text.r + text.g + text.b) / 3.;
+		text.rgb = mix(text.rgb, greyscale, saturation);
+		
+		// Contrast
+		float midpoint = pow(0.5, 2.2);
+		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
+	}
+	
+	COLOR = text;
+}"
+
+[sub_resource type="ShaderMaterial" id=22]
+shader = SubResource( 23 )
+shader_param/overlay = true
+shader_param/scanlines_opacity = 0.01
+shader_param/scanlines_width = 0.0
+shader_param/grille_opacity = 0.0
+shader_param/resolution = Vector2( 5120, 5120 )
+shader_param/pixelate = true
+shader_param/roll = true
+shader_param/roll_speed = 2.0
+shader_param/roll_size = 13.0
+shader_param/roll_variation = 5.0
+shader_param/distort_intensity = 0.002
+shader_param/noise_opacity = 0.034
+shader_param/noise_speed = 5.0
+shader_param/static_noise_intensity = 0.06
+shader_param/aberration = 0.01
+shader_param/brightness = 1.4
+shader_param/discolor = false
+shader_param/warp_amount = 1.0
+shader_param/clip_warp = false
+shader_param/vignette_intensity = 0.4
+shader_param/vignette_opacity = 0.275
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 11, 0, 11, 11 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 11, 11 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 3 )
+region = Rect2( 11, 11, 11, 11 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 11, 11, 11 )
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ SubResource( 25 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 24 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 26 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 27 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=31]
+resource_name = "HoneyShotAnim"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 0 ), Vector2( 3, 0 ), Vector2( 5, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "2" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "0" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("..:canDamage")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SwordDamageArea/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "SwordAnim"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 0 ), Vector2( 9, 0 ), Vector2( 5, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "1" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("..:canDamage")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SwordDamageArea/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="Animation" id=64]
+resource_name = "Flash"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:invincible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=65]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:invincible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=79]
+resource_name = "Hover"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -9 ), Vector2( 0, -7 ), Vector2( 0, -9 ) ]
+}
+
+[sub_resource type="Animation" id=80]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -9 ) ]
+}
+
+[node name="Tics" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Tics" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="GUIBackHolder" type="ColorRect" parent="CanvasLayer"]
+margin_left = 11.0
+margin_top = 12.0
+margin_right = 73.0
+margin_bottom = 33.0
+rect_scale = Vector2( 2, 2 )
+color = Color( 0, 0.0980392, 0.168627, 0 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthGui" type="AnimatedSprite" parent="CanvasLayer/GUIBackHolder"]
+visible = false
+position = Vector2( 38.5, 11.5 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 17 )
+animation = "12"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/GUIBackHolder/HealthGui"]
+wait_time = 2.0
+
+[node name="Key" type="Sprite" parent="CanvasLayer/GUIBackHolder"]
+position = Vector2( 321, 13.5 )
+rotation = 4.71239
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="EndScreenHolder" type="ColorRect" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+margin_right = 700.0
+margin_bottom = 700.0
+color = Color( 0.0823529, 0.0745098, 0.117647, 1 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer/EndScreenHolder"]
+margin_left = 95.0
+margin_top = 200.0
+margin_right = 180.0
+margin_bottom = 215.0
+rect_scale = Vector2( 6, 6 )
+custom_colors/font_color = Color( 0.709804, 0.32549, 0.32549, 1 )
+custom_fonts/font = SubResource( 32 )
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TicsDeathImage" type="Sprite" parent="CanvasLayer/EndScreenHolder"]
+position = Vector2( 351, 344 )
+rotation = 0.261799
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="ContinueButton" type="Button" parent="CanvasLayer/EndScreenHolder"]
+margin_left = 237.0
+margin_top = 431.0
+margin_right = 313.0
+margin_bottom = 451.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color_hover = Color( 0.501961, 0.639216, 0.878431, 1 )
+custom_colors/font_color_pressed = Color( 0.337255, 0.341176, 0.74902, 1 )
+custom_fonts/font = SubResource( 33 )
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 36 )
+custom_styles/disabled = SubResource( 37 )
+custom_styles/normal = SubResource( 38 )
+text = "CONTINUE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GiveUpButton" type="Button" parent="CanvasLayer/EndScreenHolder"]
+margin_left = 247.0
+margin_top = 503.0
+margin_right = 318.0
+margin_bottom = 524.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color_hover = Color( 0.501961, 0.639216, 0.878431, 1 )
+custom_colors/font_color_pressed = Color( 0.337255, 0.341176, 0.74902, 1 )
+custom_fonts/font = SubResource( 39 )
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/focus = SubResource( 42 )
+custom_styles/disabled = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+text = "GIVE UP"
+flat = true
+
+[node name="WarningHolder" type="ColorRect" parent="CanvasLayer/EndScreenHolder/GiveUpButton"]
+visible = false
+margin_left = -35.0
+margin_top = -74.0
+margin_right = 107.0
+margin_bottom = -24.0
+color = Color( 0.0823529, 0.0745098, 0.117647, 1 )
+
+[node name="WarningLabel" type="Label" parent="CanvasLayer/EndScreenHolder/GiveUpButton/WarningHolder"]
+margin_left = -8.0
+margin_right = 188.0
+margin_bottom = 51.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 0.709804, 0.32549, 0.32549, 1 )
+custom_fonts/font = SubResource( 45 )
+text = "ARE YOU SURE YOU
+WANT TO QUIT? YOU WILL
+LOSE ALL YOUR PROGRESS!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BookText" parent="CanvasLayer" instance=ExtResource( 10 )]
+visible = false
+
+[node name="PauseScreen" type="ColorRect" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+margin_right = 700.0
+margin_bottom = 700.0
+color = Color( 0.0823529, 0.0745098, 0.117647, 1 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausedLabel" type="Label" parent="CanvasLayer/PauseScreen"]
+margin_left = 142.0
+margin_top = 200.0
+margin_right = 200.0
+margin_bottom = 215.0
+rect_scale = Vector2( 7, 7 )
+custom_colors/font_color = Color( 0.270588, 0.266667, 0.309804, 1 )
+custom_fonts/font = SubResource( 66 )
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" type="Button" parent="CanvasLayer/PauseScreen"]
+margin_left = 210.0
+margin_top = 341.0
+margin_right = 288.0
+margin_bottom = 362.0
+rect_scale = Vector2( 3.5, 3.5 )
+custom_colors/font_color_hover = Color( 0.501961, 0.639216, 0.878431, 1 )
+custom_colors/font_color_pressed = Color( 0.337255, 0.341176, 0.74902, 1 )
+custom_fonts/font = SubResource( 67 )
+custom_styles/hover = SubResource( 69 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/focus = SubResource( 71 )
+custom_styles/disabled = SubResource( 72 )
+custom_styles/normal = SubResource( 73 )
+text = "Continue"
+flat = true
+
+[node name="GiveUpButton" type="Button" parent="CanvasLayer/PauseScreen"]
+margin_left = 227.0
+margin_top = 431.0
+margin_right = 295.0
+margin_bottom = 452.0
+rect_scale = Vector2( 3.5, 3.5 )
+custom_colors/font_color_hover = Color( 0.501961, 0.639216, 0.878431, 1 )
+custom_colors/font_color_pressed = Color( 0.337255, 0.341176, 0.74902, 1 )
+custom_fonts/font = SubResource( 68 )
+custom_styles/hover = SubResource( 74 )
+custom_styles/pressed = SubResource( 75 )
+custom_styles/focus = SubResource( 76 )
+custom_styles/disabled = SubResource( 77 )
+custom_styles/normal = SubResource( 78 )
+text = "Give Up"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WarningHolder" type="ColorRect" parent="CanvasLayer/PauseScreen/GiveUpButton"]
+visible = false
+margin_left = -35.0
+margin_top = -74.0
+margin_right = 107.0
+margin_bottom = -24.0
+color = Color( 0.0823529, 0.0745098, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WarningLabel" type="Label" parent="CanvasLayer/PauseScreen/GiveUpButton/WarningHolder"]
+margin_left = -8.0
+margin_right = 188.0
+margin_bottom = 51.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 0.709804, 0.32549, 0.32549, 1 )
+custom_fonts/font = SubResource( 45 )
+text = "ARE YOU SURE YOU
+WANT TO QUIT? YOU WILL
+LOSE ALL YOUR PROGRESS!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CRTScreenShader" type="ColorRect" parent="CanvasLayer"]
+material = SubResource( 22 )
+margin_left = -2.0
+margin_top = -3.0
+margin_right = 705.0
+margin_bottom = 705.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponOrigin" type="Position2D" parent="."]
+script = ExtResource( 5 )
+canDamage = true
+
+[node name="Weapon" type="AnimatedSprite" parent="WeaponOrigin"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 5, 0 )
+frames = SubResource( 28 )
+animation = "0"
+offset = Vector2( 4, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WeaponOrigin/Weapon"]
+anims/HoneyShotAnim = SubResource( 31 )
+anims/RESET = SubResource( 29 )
+anims/SwordAnim = SubResource( 30 )
+
+[node name="SwordDamageArea" type="Area2D" parent="WeaponOrigin/Weapon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponOrigin/Weapon/SwordDamageArea"]
+position = Vector2( 5, 0 )
+shape = SubResource( 46 )
+disabled = true
+
+[node name="DialogueHolder" type="CanvasLayer" parent="."]
+script = ExtResource( 9 )
+
+[node name="MainAnimationPlayer" parent="." instance=ExtResource( 12 )]
+
+[node name="FlashAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Flash = SubResource( 64 )
+anims/RESET = SubResource( 65 )
+
+[node name="Indicator" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -9 )
+texture = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Indicator"]
+autoplay = "Hover"
+anims/Hover = SubResource( 79 )
+anims/RESET = SubResource( 80 )
+
+[connection signal="timeout" from="CanvasLayer/GUIBackHolder/HealthGui/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/EndScreenHolder/ContinueButton" to="CanvasLayer/EndScreenHolder" method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/EndScreenHolder/GiveUpButton" to="CanvasLayer/EndScreenHolder" method="_on_GiveUpButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseScreen/ContinueButton" to="CanvasLayer/PauseScreen" method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseScreen/GiveUpButton" to="CanvasLayer/PauseScreen" method="_on_GiveUpButton_pressed"]
+[connection signal="area_entered" from="WeaponOrigin/Weapon/SwordDamageArea" to="WeaponOrigin" method="_on_SwordDamageArea_area_entered"]
+[connection signal="body_entered" from="WeaponOrigin/Weapon/SwordDamageArea" to="WeaponOrigin" method="_on_SwordDamageArea_body_entered"]
+[connection signal="animation_finished" from="MainAnimationPlayer" to="MainAnimationPlayer" method="_on_MainAnimationPlayer_animation_finished"]
+[connection signal="animation_started" from="MainAnimationPlayer" to="MainAnimationPlayer" method="_on_MainAnimationPlayer_animation_started"]

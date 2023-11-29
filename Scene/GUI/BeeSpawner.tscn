@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/GuiScript/BeeSpawnerScript.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Characters/BeeEnemy.tscn" type="PackedScene" id=2]
+
+[node name="BeeSpawner" type="Position2D"]
+script = ExtResource( 1 )
+Bee = ExtResource( 2 )
+
+[node name="TimerH" type="Timer" parent="."]
+wait_time = 9.0
+
+[node name="TimerV" type="Timer" parent="."]
+wait_time = 9.0
+
+[connection signal="timeout" from="TimerH" to="." method="_on_TimerH_timeout"]
+[connection signal="timeout" from="TimerV" to="." method="_on_TimerV_timeout"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/GuiScript/ShootPositionScript.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Effects/ReflectorBullet.tscn" type="PackedScene" id=2]
+
+[node name="ShootPosition" type="Position2D"]
+position = Vector2( 5, 0 )
+script = ExtResource( 1 )
+Bullet = ExtResource( 2 )

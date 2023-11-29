@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Tilemaps/MainTilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://Script/GuiScript/CameraScript.gd" type="Script" id=2]
+[ext_resource path="res://Script/GuiScript/ZoneTriggerScript.gd" type="Script" id=3]
+[ext_resource path="res://Script/GuiScript/TransitionRectScript.gd" type="Script" id=4]
+[ext_resource path="res://Audio/Music/MineMusic.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Script/GuiScript/HubMusicScript.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 64 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Hub" type="Node2D"]
+
+[node name="NormalTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+show_collision = true
+format = 1
+
+[node name="EnemyBarrier" type="TileMap" parent="."]
+format = 1
+
+[node name="ZoneTrigger" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneTrigger"]
+visible = false
+position = Vector2( 64, 64 )
+shape = SubResource( 1 )
+
+[node name="MainCamera" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2( 0.182, 0.182 )
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+margin_right = 600.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TransitionRect"]
+anims/FadeIn = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="MusicManager" type="Node2D" parent="."]
+
+[node name="MineMusic" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource( 5 )
+
+[node name="HubMusic" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[connection signal="body_entered" from="ZoneTrigger" to="ZoneTrigger" method="_on_ZoneTrigger_body_entered"]
+[connection signal="body_entered" from="ZoneTrigger" to="HubMusic" method="_on_ZoneTrigger_body_entered"]
+[connection signal="body_exited" from="ZoneTrigger" to="ZoneTrigger" method="_on_ZoneTrigger_body_exited"]

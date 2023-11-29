@@ -1,0 +1,68 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Images/Characters/Enemies/Wombat.png" type="Texture" id=1]
+[ext_resource path="res://Script/CharacterScript/WombatEnemyScript.gd" type="Script" id=2]
+[ext_resource path="res://Script/CharacterScript/SurviveEnemyScript.gd" type="Script" id=3]
+[ext_resource path="res://Scene/Effects/EnemyPoof.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/GUI/HeartContainer.tscn" type="PackedScene" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 8 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 8 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 8, 16, 8 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 8, 16, 8 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 3, 3 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 4 )
+
+[node name="WombatEnemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
+PoofVar = ExtResource( 4 )
+HeartVar = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+frame = 1
+playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="SurviveEnemy" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SurviveEnemy"]
+shape = SubResource( 8 )
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="SurviveEnemy" to="." method="_on_SurviveEnemy_body_entered"]

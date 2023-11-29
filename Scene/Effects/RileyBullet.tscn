@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Script/EffectsScript/RileyBulletScript.gd" type="Script" id=1]
+[ext_resource path="res://Images/Effect/RileyEnergyBall.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Effects/EnemyPoof.tscn" type="PackedScene" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 4.0
+
+[sub_resource type="Gradient" id=8]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[node name="RileyBullet" type="Area2D"]
+scale = Vector2( 0.1, 0.1 )
+script = ExtResource( 1 )
+PoofVar = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+amount = 3
+lifetime = 0.7
+texture = ExtResource( 2 )
+gravity = Vector2( -90, 0 )
+color_ramp = SubResource( 8 )
+
+[connection signal="body_entered" from="." to="." method="_on_RileyBullet_body_entered"]

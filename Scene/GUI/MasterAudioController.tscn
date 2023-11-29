@@ -1,0 +1,84 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Audio/SoundEffects/SkeletonDeath.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/SoundEffects/PickupKey.wav" type="AudioStream" id=2]
+[ext_resource path="res://Audio/SoundEffects/BeeDeath.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/SoundEffects/BatDeath.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/Music/MineMusic.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio/SoundEffects/TicsOuch.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/Music/ruinElevatorMusic.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Music/BossFightMusic.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Audio/Music/OpeningMusic.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Music/CastleMusic.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Audio/Music/RuinMusic.wav" type="AudioStream" id=11]
+[ext_resource path="res://Audio/SoundEffects/DoorOpen.wav" type="AudioStream" id=12]
+[ext_resource path="res://Audio/SoundEffects/SwordHit.wav" type="AudioStream" id=13]
+[ext_resource path="res://Audio/Music/Home Music.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Audio/SoundEffects/HealthUp.wav" type="AudioStream" id=15]
+[ext_resource path="res://Audio/SoundEffects/Thump.wav" type="AudioStream" id=16]
+
+[node name="MasterAudioController" type="Node2D"]
+
+[node name="PickUpkey" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -18.828
+
+[node name="BeeDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -12.552
+
+[node name="SkeletonDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="BatDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.0
+
+[node name="MineSurviveMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -12.552
+pitch_scale = 1.21
+
+[node name="TicsHurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -9.354
+
+[node name="ElevatorMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="BossMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="OpeningMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -11.495
+
+[node name="CastleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -22.017
+pitch_scale = 0.9
+
+[node name="MineMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -24.24
+
+[node name="HomeMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="RuinMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -8.758
+
+[node name="SwordHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -23.537
+
+[node name="HealthUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="Thump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = 11.495

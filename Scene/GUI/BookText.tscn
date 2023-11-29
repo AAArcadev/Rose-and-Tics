@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/alagard.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Script/GuiScript/BookTextScript.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="BookText" type="ColorRect"]
+margin_left = 70.0
+margin_right = 630.0
+margin_bottom = 700.0
+color = Color( 0.0470588, 0.0431373, 0.0431373, 0.811765 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GeraldsBookMine" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 348.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "July 13th
+I’m worried. At first I thought it was just a coping mechanism for Lilian after we heard about the bad news. So I didn't mention anything. But it’s been months since she found out that she is infertile and she still talks to that imaginary child. It’s always ‘Gerald, Roseline wants to go out to play’ or ‘Gerald, Roseline is sleeping so be quiet.’ Sometimes it can be straight up terrifying. Just last night I heard her ‘cooing Roseline’ back to sleep. I went to the room where the sound was coming from and I saw her on a rocking chair with her hand curled up as if cradling a baby. If things continue this way I might need to seek professional help.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RileyBookCastle" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 348.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "February 12th
+The prince is insufferable! In my 15 years working here I have never been stressed as much as now! He now says he wants a serum that makes the soldiers immortal. Immortal! Immortality isn’t something to be messed with. Unfortunately I have no choice in this.
+
+March 7th
+Surprisingly progress on the serum has been quite fast! Tests on animals have been positive. The closest thing to immortality scientifically is rapid regeneration and tests on animals have brought this exact result. Next step is testing on humans. Unfortunately, no one in their right mind would want to be a test subject for such a dangerous experiment. That is until the prince introduced me to a woman named Lilian. She lives on the outskirts of town, she’s quite crude but nice enough. She seems to be under the impression that these tests will reverse her infertility. But I’m not going to be the one to inform her about the truth.
+
+March 25th
+I don’t often concern myself with such unimportant things, but the prince seems to have taken a liking to Lilian. Of course, I highly doubt his feelings are genuine. His many relationships with women are no runout after all. But it’s his constant promise to her that he will ‘cure’ her infertility that worries me. If she were to learn the truth…
+
+June 27th
+Tragedy has struck. But from that an amazing discovery has sprouted. Quite literally actually. So apparently the test subject has a husband. And this husband assaulted and actually killed the prince as he suspected that he was having an affair with his wife. Whether this is true, I am uncertain. But he was sentenced to death. The test subject has run away but I later came to learn that she actually took her own life. But that matters not because what her death brought was much more important. I went to her house and in the back garden I saw the most peculiar thing. A talking flower growing from a mostly decomposed body. No doubt the test subjects. It seems that the serum. Caused this unexplainable phenomenon. I actually spoke to the flower. It had all the idiosyncrasies as the test subject. No doubt some sort of reincarnation of her. The flower doesn’t seem to have any recollection of its previous life. I even gave it a book written by the test subject in order to see if it could remember but to no luck. But nevertheless this is groundbreaking! Perhaps self regeneration is thinking too small. Perhaps immortality is actually achievable!
+
+August 2nd
+
+Do i believe in karma? From a scientific standpoint, not at all. But that seems to be what has befallen us all in our quest to achieve something that we shouldn’t be striving for. A sample of the serum somehow find its way to the streets and sure enough knockoffs were created and now everyone in the town has an impure, fake version of the serum in their bloodstream!
+
+August 3rd
+
+The end approaches! The street is now filled with sentient skeletons! No doubt an effect of the fake serum. I have boarded myself in my lab. I don’t know how long I can stay here.
+
+August 7 
+Food ran out 3 days ago and water one day ago. But I don’t intend on dying anytime soon. Not when I’m so close to achieving what I so long sought.  I have created a serum that I am 98% sure will make me immortal. The only thing that remains is to try it. 
+
+August 8 
+The 2% chance occurred. I am still very much mortal. But the serum definitely had an effect. This might be my last entry. 
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LiliansBook" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 348.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "December 20th 
+Today was very eventful. It always is with rosaline. Never have I thought being a mother would bring me such joy. But when I look at Roseline’s mesmerizing purple eyes, feelings of love and warmth overcome me. Gerald on the other hand has just been a big grump. He says he’s worried about me. I keep telling him that I’m not pregnant anymore but he won’t have it. Sometimes I wonder what I saw in him. 
+
+The rest of the book is filled with Lilian's and Rosaline's activities on a daily basis... 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GeraldsBookRuin" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 25.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 348.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "July 26th
+For the past 4 months, Lilian has been leaving the house to go to the town a lot more. She's never told me what she was going to do there but I just guessed maybe she made some friends over there. I didn't want to stop her either, because since she started going there, there has been no talk of ‘Roseline’. But things changed since I saw her talking to the prince. Everyone and their mothers’ know that you didn’t want your female relative talking to him. Because most times they would end up being one of his many girlfriends. So imagine my surprise when I saw him talking to my wife! Not only that but, I was also surprised to see him talking to my wife. And worse of it they seemed to be flirting! The prince may be a dangerous man but when it comes to protecting my wife from scum like him, I am even more dangerous."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EscLabel" type="Label" parent="."]
+margin_left = -67.0
+margin_top = 2.0
+margin_right = 65.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 2 )
+text = "Press ESC to close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="EscLabel"]
+show_behind_parent = true
+margin_left = -3.0
+margin_top = -2.0
+margin_right = 67.0
+margin_bottom = 16.0
+color = Color( 0.0470588, 0.0431373, 0.0431373, 0.811765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

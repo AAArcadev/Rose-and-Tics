@@ -1,0 +1,9 @@
+extends Position2D
+
+export (PackedScene) var Bullet
+
+func shoot():
+	var b = Bullet.instance()
+	get_parent().call_deferred("add_child",b)
+	b.transform = transform
+
